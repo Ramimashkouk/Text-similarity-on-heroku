@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <div class="container">
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        
+        <div class="form-group">
+          <h3>Texts you want to compare</h3>
+          <textarea
+            name="text1"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Text1"
+          ></textarea>
+	  <textarea
+            name="text2"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Text2"
+          ></textarea>
+        </div>
+        <input type="submit" value="Compare" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
